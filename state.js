@@ -1,14 +1,14 @@
 // 1
 
-let income = 1200000;
+let income = parseInt(prompt("Enter your income: "));
 
 if(income<=250000){
     console.log("Null");
 }
-else if(income <= 500000){
+else if(income>250000 && income <= 500000){
     console.log(tax = (income - 250000)*0.05);
 }
-else if(income <= 1000000){
+else if(income>500000 && income <= 1000000){
     console.log(12500+(income - 500000)*0.2);
 }
 else{
@@ -76,11 +76,13 @@ if(units > 0 && units <= 100){
     console.log(units*1);
 }
 else if(units > 100 && units <=300){
-    var unit = units*1;
-    console.log(unit*1.5)
+    var unit = units - 100;
+    console.log(`bill = ${100+unit*1.5}`);
 }
 else if(units > 300 ){
-    var unit = units*1;
-    var units1 = unit*1.5;
-    console.log(units1*2)
+    var unit = units-300;
+    console.log(`bill = ${100+200*1.5+unit*2}`)
+}
+else{
+    console.log("invalid");
 }
